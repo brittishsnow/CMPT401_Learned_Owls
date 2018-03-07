@@ -1,0 +1,12 @@
+======================= Jason Yu ====================================
+Jason modelled laser and m1911 pistol. 
+
+======================= Max Stow ====================================
+Max created the terrain in Unity and included some prefab assets from store
+
+======================= Justin van Heek =============================
+Justin modelled a pistol, ninjastar, and bullet. Textures modified by Justin from the internet.
+
+======================= Caleb Wollf =================================
+Caleb modified the zombie model from the internet. Textures modified by Caleb from the internet.
+All animations created completely by Caleb.
