@@ -263,8 +263,8 @@ PlayerSettings:
   - m_BuildTarget: Standalone
     m_Enabled: 1
     m_Devices:
-    - stereo
     - Oculus
+    - stereo
     - OpenVR
     - split
   m_BuildTargetEnableVuforiaSettings: []
