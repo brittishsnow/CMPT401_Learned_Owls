@@ -16,10 +16,11 @@ public class gun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetMouseButtonDown (0)) {
+		if (Input.GetMouseButtonDown (0) || OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f || OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.5f) {
 			Debug.Log ("Pressed left click.");
 			shoot ();
 		}
+
 
 		if (Input.GetMouseButtonDown (1)) {
 			Debug.Log ("Pressed right click.");
