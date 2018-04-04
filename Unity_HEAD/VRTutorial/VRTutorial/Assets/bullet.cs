@@ -15,8 +15,10 @@ public class bullet : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		Debug.Log ("Bullet hit " + other.name);
-		other.SendMessage ("hit");
-		Destroy (gameObject);
+		if (other.tag != "Player") {
+			Debug.Log ("Bullet hit " + other.name);
+			other.SendMessage ("hit");
+			Destroy (gameObject);
+		}
 	}
 }
