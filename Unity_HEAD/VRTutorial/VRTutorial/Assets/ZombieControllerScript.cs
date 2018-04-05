@@ -17,7 +17,7 @@ public class ZombieControllerScript : MonoBehaviour {
 	private bool waveIsGoing = false;
 	private bool ending = false;
 	private float timer = 0;
-	List<GameObject> extraZombies;
+	List<GameObject> extraZombies = new List<GameObject>();
 	private bool waitForExtras = false;
 
 	// Use this for initialization
@@ -45,7 +45,6 @@ public class ZombieControllerScript : MonoBehaviour {
 			}
 			if (!checkIfExtrasAlive ()) {
 				waitForExtras = false;
-				correct.SetActive (false);
 
 				EndWave (true);
 			}
@@ -74,6 +73,8 @@ public class ZombieControllerScript : MonoBehaviour {
 		if (ending) {
 			timer += Time.deltaTime;
 				if (timer > 3) {
+				correct.SetActive (false);
+
 					timer = 0;
 					ending = false;
 					zombieA.GetComponent<ZombieAnimationScript> ().ResetPosition ();
@@ -135,9 +136,10 @@ public class ZombieControllerScript : MonoBehaviour {
 		Debug.Log ("Positions : " + zombieStartPos.Count);
 		for (int i = 0; i < num; i++) {
 			Debug.Log ("Add zombie " + i + " out of " + num);
-			GameObject extraZombie = (GameObject)Instantiate (extraZombieModel, zombieStartPos [i]);
-
+			GameObject extraZombie = (GameObject)Instantiate (extraZombieModel);
+			extraZombie.transform.position = zombieStartPos [i].position;
 			extraZombie.GetComponent<ZombieAnimationScript> ().StartMoving ();
+			extraZombies.Add (extraZombie);
 			}
 	}
 

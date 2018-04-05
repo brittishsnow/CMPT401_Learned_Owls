@@ -21,6 +21,8 @@ public class questionHandler : MonoBehaviour {
 	public GameObject end;
 	public GameObject background;
 	public GameObject nextRound;
+	public GameObject playerStartLoc;
+	public GameObject player;
 	public bool isOver = false;
 
 	private float timer = 0;
@@ -55,6 +57,7 @@ public class questionHandler : MonoBehaviour {
 	}
 
 	public void loadNextQuestion(){
+		player.transform.position = playerStartLoc.transform.position;
 		nextRound.SetActive (true);
 		timer = 0;
 		runTime = true;
