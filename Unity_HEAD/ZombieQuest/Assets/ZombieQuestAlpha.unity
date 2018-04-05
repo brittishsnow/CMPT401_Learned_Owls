@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.00066218036, g: 0.0010743715, b: 0.42007422, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -421,6 +421,11 @@ Prefab:
     - target: {fileID: 1562770239201336, guid: fd84c8788bdf5a548a7b1139e1be150e, type: 2}
       propertyPath: m_Name
       value: VR Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 64566422102365738, guid: fd84c8788bdf5a548a7b1139e1be150e,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fd84c8788bdf5a548a7b1139e1be150e, type: 2}
@@ -1440,8 +1445,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.25935337, g: 0.41269675, b: 0.8602941, a: 1}
-  m_Intensity: 0.5
+  m_Color: {r: 0.46323532, g: 0.6002028, b: 1, a: 1}
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10

@@ -4,11 +4,11 @@
     <Files>
       <File FileName="Assets\OvrAvatar\Samples\SocialStarter\Assets\Scripts\P2PManager.cs" Line="1" Column="1" />
       <File FileName="Assets\gun.cs" Line="1" Column="1" />
-      <File FileName="Assets\questionHandler.cs" Line="60" Column="65" />
+      <File FileName="Assets\questionHandler.cs" Line="1" Column="1" />
       <File FileName="Assets\ZombieControllerScript.cs" Line="20" Column="56" />
       <File FileName="Assets\ZombieAnimationScript.cs" Line="1" Column="1" />
-      <File FileName="Assets\target.cs" Line="37" Column="32" />
-      <File FileName="Assets\bullet.cs" Line="18" Column="18" />
+      <File FileName="Assets\target.cs" Line="1" Column="1" />
+      <File FileName="Assets\bullet.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
