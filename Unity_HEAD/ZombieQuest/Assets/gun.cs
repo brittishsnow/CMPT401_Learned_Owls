@@ -6,8 +6,15 @@ public class gun : MonoBehaviour {
 
 	public GameObject bullet;
 	public GameObject exitPoint;
+	public bool auto = false;
+	public float fireRate = 0.5f;
 	public int bulletSpeed = 100;
 	public int direction = 1;
+	
+	private bool trigger = false;
+	private bool prevtrigger = false;
+	private float timer = 0;
+	
 
 	// Use this for initialization
 	void Start () {
@@ -16,10 +23,18 @@ public class gun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		trigger = false;
 		if (Input.GetMouseButtonDown (0) || OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f || OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.5f) {
 			Debug.Log ("Pressed left click.");
-			shoot ();
+			if(auto && timer > fireRate) {
+				shoot ();
+			}
+			else if (!auto && timer > fireRate && !prevTrigger){
+				shoot ();
+			}
+			trigger = true;
 		}
+		prevTrigger = trigger;
 
 
 		if (Input.GetMouseButtonDown (1)) {
@@ -29,9 +44,12 @@ public class gun : MonoBehaviour {
 		if (Input.GetMouseButtonDown (2)) {
 			Debug.Log ("Pressed middle click.");
 		}
+		
+		timer += Time.deltaTime;
 	}
 
 	private void shoot() {
+		timer = 0;
 		Vector3 pos = gameObject.transform.position;
 		GameObject bulletInstance = GameObject.Instantiate (bullet, exitPoint.transform.position, gameObject.transform.rotation);
 		switch (direction) {
