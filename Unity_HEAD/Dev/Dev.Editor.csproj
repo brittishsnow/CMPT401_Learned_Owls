@@ -5,17 +5,17 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6EE2E85F-CAA2-91B2-4994-E7FF124EC4F9}</ProjectGuid>
+    <ProjectGuid>{03E28596-A35F-762C-1028-EF9A53C6BD06}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectGenerator>VSTU</UnityProjectGenerator>
-    <UnityProjectType>GamePlugins:3</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.3.1f1</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -325,50 +325,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
-    <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
-    <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
-    <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
-    <Compile Include="Assets\Standard Assets\Characters\RollerBall\Scripts\Ball.cs" />
-    <Compile Include="Assets\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
-    <Compile Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\AICharacterControl.cs" />
-    <Compile Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" />
-    <Compile Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\ButtonHandler.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\MobileControlRig.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
-    <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\ActivateTrigger.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\AlphaButtonClickMask.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\AutoMobileShaderSwitch.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\AutoMoveAndRotate.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\CameraRefocus.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\CurveControlledBob.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\DragRigidbody.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\DynamicShadowSettings.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\EventSystemChecker.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\FollowTarget.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\ForcedReset.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\FOVKick.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\FPSCounter.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\LerpControlledBob.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\ObjectResetter.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\ParticleSystemDestroyer.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\PlatformSpecificContent.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\SimpleActivatorMenu.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\SimpleMouseRotator.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\SmoothFollow.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\TimedObjectActivator.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\TimedObjectDestructor.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\WaypointCircuit.cs" />
-    <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
+    <ProjectReference Include="Dev.Plugins.csproj">
+      <Project>{6EE2E85F-CAA2-91B2-4994-E7FF124EC4F9}</Project>
+      <Name>Dev.Plugins</Name>
+    </ProjectReference>
+    <ProjectReference Include="Dev.csproj">
+      <Project>{9EC9756D-40AE-1ECE-D343-662DFD06567F}</Project>
+      <Name>Dev</Name>
+    </ProjectReference>
+    <ProjectReference Include="Dev.Editor.Plugins.csproj">
+      <Project>{70B7C799-7895-82A4-3048-D7528CF8989D}</Project>
+      <Name>Dev.Editor.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\OculusPlatform\Editor\GUIHelper.cs" />
+    <Compile Include="Assets\OculusPlatform\Editor\OculusPlatformSettingsEditor.cs" />
+    <Compile Include="Assets\OculusPlatform\Editor\OculusStandalonePlatformResponse.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRBuild.cs" />
+    <Compile Include="Assets\OVR\Editor\OVREngineConfigurationUpdater.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRLayerAttributeEditor.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRManifestPreprocessor.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRPluginUpdater.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRPluginUpdaterStub.cs" />
+    <Compile Include="Assets\OVR\Editor\OVRScreenshotWizard.cs" />
+    <Compile Include="Assets\OVR\Scripts\Editor\OVRManagerEditor.cs" />
+    <Compile Include="Assets\OvrAvatar\Editor\AvatarMaterialEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\OVR\Editor\AndroidManifest.OVRSubmission.xml" />
