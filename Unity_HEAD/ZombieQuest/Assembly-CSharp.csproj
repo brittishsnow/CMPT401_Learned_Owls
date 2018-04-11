@@ -51,8 +51,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\bullet.cs" />
-     <Compile Include="Assets\gun.cs" />
      <Compile Include="Assets\OculusPlatform\Scripts\AchievementType.cs" />
      <Compile Include="Assets\OculusPlatform\Scripts\AndroidPlatform.cs" />
      <Compile Include="Assets\OculusPlatform\Scripts\ApplicationOptions.cs" />
@@ -240,10 +238,12 @@
      <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSComponent.cs" />
      <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSV2Component.cs" />
      <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarTouchController.cs" />
-     <Compile Include="Assets\questionHandler.cs" />
-     <Compile Include="Assets\target.cs" />
-     <Compile Include="Assets\ZombieAnimationScript.cs" />
-     <Compile Include="Assets\ZombieControllerScript.cs" />
+     <Compile Include="Assets\Scripts\bullet.cs" />
+     <Compile Include="Assets\Scripts\gun.cs" />
+     <Compile Include="Assets\Scripts\questionHandler.cs" />
+     <Compile Include="Assets\Scripts\target.cs" />
+     <Compile Include="Assets\Scripts\ZombieAnimationScript.cs" />
+     <Compile Include="Assets\Scripts\ZombieControllerScript.cs" />
      <None Include="Assets\OvrAvatar\Content\Materials\AvatarMaterialStateShader.cginc" />
      <None Include="Assets\OVR\Resources\OVRMRUnlitTransparent.shader" />
      <None Include="Assets\OVR\Resources\OVRMRChromaKey.cginc" />

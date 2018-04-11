@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ZombieControllerScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\gun.cs">
     <Files>
       <File FileName="Assets\OvrAvatar\Samples\SocialStarter\Assets\Scripts\P2PManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\gun.cs" Line="1" Column="1" />
+      <File FileName="Assets\gun.cs" Line="15" Column="20" />
       <File FileName="Assets\questionHandler.cs" Line="1" Column="1" />
-      <File FileName="Assets\ZombieControllerScript.cs" Line="20" Column="56" />
+      <File FileName="Assets\ZombieControllerScript.cs" Line="1" Column="1" />
       <File FileName="Assets\ZombieAnimationScript.cs" Line="1" Column="1" />
       <File FileName="Assets\target.cs" Line="1" Column="1" />
       <File FileName="Assets\bullet.cs" Line="1" Column="1" />
