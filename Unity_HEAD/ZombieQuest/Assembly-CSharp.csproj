@@ -240,8 +240,10 @@
      <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarTouchController.cs" />
      <Compile Include="Assets\Scripts\bullet.cs" />
      <Compile Include="Assets\Scripts\gun.cs" />
+     <Compile Include="Assets\Scripts\Hotkeys.cs" />
      <Compile Include="Assets\Scripts\questionHandler.cs" />
      <Compile Include="Assets\Scripts\target.cs" />
+     <Compile Include="Assets\Scripts\TitleScreen.cs" />
      <Compile Include="Assets\Scripts\ZombieAnimationScript.cs" />
      <Compile Include="Assets\Scripts\ZombieControllerScript.cs" />
      <None Include="Assets\OvrAvatar\Content\Materials\AvatarMaterialStateShader.cginc" />

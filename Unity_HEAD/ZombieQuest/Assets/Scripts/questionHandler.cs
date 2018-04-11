@@ -23,6 +23,8 @@ public class questionHandler : MonoBehaviour {
 	public GameObject nextRound;
 	public GameObject playerStartLoc;
 	public GameObject player;
+	public GameObject gunStartLoc;
+	public GameObject gun;
 	public bool isOver = false;
 
 	private float timer = 0;
@@ -35,8 +37,7 @@ public class questionHandler : MonoBehaviour {
 		public string[] options;
 	}
 
-	// Use this for initialization
-	void Start () {
+	public void loadGame () {
 		Load (filename);
 		displayQuestion (questionId);
 	}
@@ -54,6 +55,22 @@ public class questionHandler : MonoBehaviour {
 				runTime = false;
 			}
 		}
+	}
+	
+	public void restart() {
+		zombieController.SendMessage ("EndWave", false);
+		questionId = 0;
+		displayQuestion(questionId);
+		prevId = questionId;
+
+	}
+	
+	public void resetPlayer() {
+		player.transform.position = playerStartLoc.transform.position;
+	}
+	
+	public void resetGun() {
+		gun.transform.position = gunStartLoc.transform.position;
 	}
 
 	public void loadNextQuestion(){
