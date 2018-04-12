@@ -59,10 +59,12 @@ public class questionHandler : MonoBehaviour {
 	
 	public void restart() {
 		zombieController.SendMessage ("EndWave", false);
+		background.SetActive(false);
+		end.SetActive(false);
 		questionId = 0;
 		displayQuestion(questionId);
 		prevId = questionId;
-
+		
 	}
 	
 	public void resetPlayer() {
@@ -131,7 +133,7 @@ public class questionHandler : MonoBehaviour {
 	}
 
 	private void loadTargets(int correct) {
-		zombieController.SendMessage ("StartWave", 1.5F);
+		zombieController.SendMessage ("StartWave", 1.0F);
 		Debug.Log("Correct " + correct);
 		zombieA.SendMessage ("isCorrect", false);
 		zombieB.SendMessage ("isCorrect", false);

@@ -6,6 +6,8 @@ public class gun : MonoBehaviour {
 
 	public GameObject bullet;
 	public GameObject exitPoint;
+	public OVRGrabber rightHand;
+	public OVRGrabber leftHand;
 	public bool auto = false;
 	public float fireRate = 0.5f;
 	public int bulletSpeed = 100;
@@ -23,17 +25,18 @@ public class gun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(GetComponent<OVRGrabbable>().isGrabbed) {
 		trigger = false;
-		if (Input.GetMouseButtonDown (0) || OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f || OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.5f) {
-			Debug.Log ("Pressed left click.");
-			if(auto && timer > fireRate) {
-				shoot ();
+		if(GetComponent<OVRGrabbable>().isGrabbed) {
+			if((GetComponent<OVRGrabbable>().grabbedBy == rightHand && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.5f) || (GetComponent<OVRGrabbable>().grabbedBy == leftHand && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f)) {
+				Debug.Log ("Pressed left click.");
+				if(auto && timer > fireRate) {
+					shoot ();
+				}
+				else if (!auto && timer > fireRate && !prevTrigger){
+					shoot ();
+				}
+				trigger = true;
 			}
-			else if (!auto && timer > fireRate && !prevTrigger){
-				shoot ();
-			}
-			trigger = true;
 		}
 		prevTrigger = trigger;
 
@@ -47,7 +50,6 @@ public class gun : MonoBehaviour {
 		}
 		
 		timer += Time.deltaTime;
-		}
 	}
 
 	private void shoot() {

@@ -10,6 +10,7 @@ public class ZombieControllerScript : MonoBehaviour {
 	public GameObject zombieD;
 	public GameObject extraZombieModel;
 	public GameObject correct;
+	public GameObject wrong;
 
 
 	public List<Transform> startingPositions = new List<Transform>();
@@ -17,6 +18,7 @@ public class ZombieControllerScript : MonoBehaviour {
 	private bool waveIsGoing = false;
 	private bool ending = false;
 	private float timer = 0;
+	private float wrongTimer = 0;
 	List<GameObject> extraZombies = new List<GameObject>();
 	private bool waitForExtras = false;
 
@@ -33,9 +35,20 @@ public class ZombieControllerScript : MonoBehaviour {
 		zombieD.GetComponent<ZombieAnimationScript> ().Die();
 		waitForExtras = true;
 	}
+	public void Wrong() {
+		wrong.SetActive (true);
+
+	}
 	// Update is called once per frame
 	void Update () {
-		
+
+		if (waitForExtras) {
+			wrongTimer += Time.deltaTime;
+
+			if (wrongTimer > 1) {
+				wrong.SetActive (false);
+			}
+		}
 		//DEBUG KEY CODES:
 		if (waitForExtras) {
 			timer += Time.deltaTime;
@@ -43,6 +56,7 @@ public class ZombieControllerScript : MonoBehaviour {
 			if (timer > 1) {
 				correct.SetActive (false);
 			}
+
 			if (!checkIfExtrasAlive ()) {
 				waitForExtras = false;
 
