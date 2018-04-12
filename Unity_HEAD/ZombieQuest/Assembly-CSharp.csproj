@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\bulletv2.cs" />
      <Compile Include="Assets\DynamicWater\BuoyancyForce.cs" />
      <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_BoatController.cs" />
      <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_BoatGUI.cs" />
@@ -273,13 +274,16 @@
      <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSComponent.cs" />
      <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarSkinnedMeshRenderPBSV2Component.cs" />
      <Compile Include="Assets\OvrAvatar\Scripts\OvrAvatarTouchController.cs" />
+     <Compile Include="Assets\Scripts\AICharacterControl.cs" />
      <Compile Include="Assets\Scripts\bullet.cs" />
      <Compile Include="Assets\Scripts\gun.cs" />
      <Compile Include="Assets\Scripts\Hotkeys.cs" />
      <Compile Include="Assets\Scripts\questionHandler.cs" />
      <Compile Include="Assets\Scripts\target.cs" />
+     <Compile Include="Assets\Scripts\ThirdPersonCharacter.cs" />
      <Compile Include="Assets\Scripts\TitleScreen.cs" />
      <Compile Include="Assets\Scripts\ZombieAnimationScript.cs" />
+     <Compile Include="Assets\Scripts\ZombieAnimationScriptV2.cs" />
      <Compile Include="Assets\Scripts\ZombieControllerScript.cs" />
      <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\ButtonHandler.cs" />

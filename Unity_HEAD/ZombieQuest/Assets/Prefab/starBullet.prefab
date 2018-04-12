@@ -880,6 +880,7 @@ GameObject:
   - component: {fileID: 65236609521716544}
   - component: {fileID: 54602955353276180}
   - component: {fileID: 114865358456191718}
+  - component: {fileID: 114319366297729616}
   m_Layer: 0
   m_Name: starBullet
   m_TagString: Untagged
@@ -1784,13 +1785,25 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114865358456191718
+--- !u!114 &114319366297729616
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1973985160864120}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c685d033fdbe6dc45b6fe45beafa88fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bloodFx: {fileID: 1929306295851640, guid: e4baa166fc513af4a8ddc3425708fac0, type: 2}
+--- !u!114 &114865358456191718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1973985160864120}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c2de583a8e8c09547ae808f7dda75705, type: 3}
   m_Name: 

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class TitleScreen : MonoBehaviour {
 
-	public float time = 4;
+
 	public GameObject questionHandler;
 
-	private float timer = 0;
+
 	public Canvas canvas;
 
 	// Use this for initialization
@@ -16,8 +16,8 @@ public class TitleScreen : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		timer += Time.deltaTime;
-		if (timer > time && canvas.enabled) {
+		
+		if (OVRInput.Get(OVRInput.Button.Start) && canvas.enabled) {
 			canvas.enabled = false;
 			questionHandler.SendMessage ("loadGame");
 		}
