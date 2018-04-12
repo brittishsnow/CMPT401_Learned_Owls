@@ -11,6 +11,7 @@ public class gun : MonoBehaviour {
 	public float fireRate = 0.5f;
 	public int bulletSpeed = 100;
 	public int direction = 1;
+	AudioSource gunShot;
 	
 	private bool trigger = false;
 	private bool prevTrigger = false;
@@ -19,7 +20,7 @@ public class gun : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		gunShot = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -54,7 +55,7 @@ public class gun : MonoBehaviour {
 	private void shoot() {
 		timer = 0;
 		Vector3 pos = gameObject.transform.position;
-		
+		gunShot.Play();
 		GameObject bulletInstance = GameObject.Instantiate (bullet, exitPoint.transform.position, gameObject.transform.rotation);
 		switch (direction) {
 		case 1: 
