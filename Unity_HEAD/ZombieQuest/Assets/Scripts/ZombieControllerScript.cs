@@ -22,6 +22,7 @@ public class ZombieControllerScript : MonoBehaviour {
 	private float wrongTimer = 0;
 	List<GameObject> extraZombies = new List<GameObject>();
 	private bool waitForExtras = false;
+	private bool wrongWait = false;
 
 	// Use this for initialization
 	void Start () {
@@ -40,16 +41,19 @@ public class ZombieControllerScript : MonoBehaviour {
 	public void Wrong() {
 		wrong.SetActive (true);
 		wrongSound.Play();
+		wrongWait = true;
 
 	}
 	// Update is called once per frame
 	void Update () {
 
-		if (waitForExtras) {
+		if (wrongWait) {
 			wrongTimer += Time.deltaTime;
 
 			if (wrongTimer > 1) {
 				wrong.SetActive (false);
+				wrongTimer = 0;
+				wrongWait = false;
 			}
 		}
 		//DEBUG KEY CODES:

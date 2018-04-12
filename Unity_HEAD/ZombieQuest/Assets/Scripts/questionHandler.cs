@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using System.IO;
 using System.Text;
 using System;
+using UnityEngine.SceneManagement;
 
 
 public class questionHandler : MonoBehaviour {
@@ -59,12 +60,21 @@ public class questionHandler : MonoBehaviour {
 	}
 	
 	public void restart() {
+		Debug.Log("Restart");
+		
+		 SceneManager.LoadScene("ZombieQuestAlpha");
+
+		/*
+		//End wave
 		zombieController.SendMessage ("EndWave", false);
+		//Remove game over screen
 		background.SetActive(false);
 		end.SetActive(false);
+		//Restart at question 1
 		questionId = 0;
 		displayQuestion(questionId);
 		prevId = questionId;
+		*/
 		
 	}
 	
