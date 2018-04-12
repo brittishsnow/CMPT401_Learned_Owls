@@ -131,7 +131,7 @@ public class questionHandler : MonoBehaviour {
 	}
 
 	private void loadTargets(int correct) {
-		zombieController.SendMessage ("StartWave", 1.0F);
+		zombieController.SendMessage ("StartWave", 1.5F);
 		Debug.Log("Correct " + correct);
 		zombieA.SendMessage ("isCorrect", false);
 		zombieB.SendMessage ("isCorrect", false);

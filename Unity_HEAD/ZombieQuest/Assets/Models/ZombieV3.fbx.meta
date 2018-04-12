@@ -337,7 +337,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Die1
       takeName: Take 001
-      firstFrame: 65
+      firstFrame: 90
       lastFrame: 181
       wrapMode: 0
       orientationOffsetY: 0

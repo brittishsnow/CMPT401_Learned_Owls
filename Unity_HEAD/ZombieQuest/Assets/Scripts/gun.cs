@@ -23,6 +23,7 @@ public class gun : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(GetComponent<OVRGrabbable>().isGrabbed) {
 		trigger = false;
 		if (Input.GetMouseButtonDown (0) || OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f || OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.5f) {
 			Debug.Log ("Pressed left click.");
@@ -46,6 +47,7 @@ public class gun : MonoBehaviour {
 		}
 		
 		timer += Time.deltaTime;
+		}
 	}
 
 	private void shoot() {

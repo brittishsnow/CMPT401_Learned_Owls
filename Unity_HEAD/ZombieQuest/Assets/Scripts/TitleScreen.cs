@@ -17,7 +17,7 @@ public class TitleScreen : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timer += Time.deltaTime;
-		if (timer > time) {
+		if (timer > time && canvas.enabled) {
 			canvas.enabled = false;
 			questionHandler.SendMessage ("loadGame");
 		}
