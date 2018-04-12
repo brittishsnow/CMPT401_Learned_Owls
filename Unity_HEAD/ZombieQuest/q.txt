@@ -1,2 +1,15 @@
-question1\answer\wrong\wrong\wrong
-question2\answer\wrong\wrong\wrong
+What is a CAVE system?\Screens surrounding you in a box\A tree model generation\A 6.1 surround sound system\The HMD for the DataGlove
+What is flat shading?\Shading determined per polygon\Shading determined by vertex\ Shading calculated across a polygon\Shading determine per 3D model
+What is it called when an audience is willing to overlook the limitations of a medium so they do not interfere with acceptance of those premises?\Suspension of disbelief\Skinning\Immersion\Instantiation
+Who developed BOIDS?\Craig Reynolds\Ivan Sutherland\Andrew Park\Virtual Human Project
+Which of the following contains a virtual object placed in a real world?\Augmented Reality\Virtual Reality\Augmented Virtuality\Reality
+What is nimbus?\The space in which an object can perceive other objects\The area that bounds the presence of an object in space\A particle system that creates a cloud-like effect\The sense of presence or being immersed in a new world
+Which mapping modifies the coordinates of the points?\Displacement mapping\Bump mapping\Translation mapping\Vertex mapping
+What is occlusion culling?\Objects not visible by the camera are not rendered\Objects not visible by the camera are not downloaded\Objects visible by the camera are marked as priority for processing\Objects visible by the camera are rendered with bump mapping
+What is aura?\The area that bounds the presence of an object in space\The space in which an object can perceive other objects\A particle system that creates a cloud-like effect\The sense of presence or being immersed in a new world 
+This virtual anatomy project focusses on the muscular-skeletal system and is based in the US.\Visible Human Project (VHP)\Virtual Physiological Human (VPH)\Physiome Project\Virtual Anatomy Project (VAP)
+Which mapping creates the appearance of 3D relief without modify the vertices?\Bump mapping\Displacement mapping\Translation mapping\Vertex mapping
+What is it called when you construct the bones of a 3D model?\Rigging\Skinning\Binding\Modeling
+In which kinematic model do you need to specify the position of every joint?\Forward kinematics\Inverse kinematics\Joint Kinematics\Reverse Kinematics
+What is a Bezier curve with a high number of control points?\High order curve\Straight line\Quadratic curve\Cubic curve
+What simulates the light transfer between surfaces (includes diffuse reflectors and color bleed)?\Radiosity\Phong\Blinn\Specular

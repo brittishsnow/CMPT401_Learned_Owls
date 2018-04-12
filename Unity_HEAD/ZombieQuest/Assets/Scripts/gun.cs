@@ -27,7 +27,7 @@ public class gun : MonoBehaviour {
 	void Update () {
 		trigger = false;
 		if(GetComponent<OVRGrabbable>().isGrabbed) {
-			if((GetComponent<OVRGrabbable>().grabbedBy == rightHand && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.5f) || (GetComponent<OVRGrabbable>().grabbedBy == leftHand && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f)) {
+			if((GetComponent<OVRGrabbable>().grabbedBy == rightHand && OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) > 0.5f) || (GetComponent<OVRGrabbable>().grabbedBy == leftHand && OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) > 0.5f)) {
 				Debug.Log ("Pressed left click.");
 				if(auto && timer > fireRate) {
 					shoot ();
