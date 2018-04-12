@@ -26,6 +26,10 @@ public class questionHandler : MonoBehaviour {
 	public GameObject player;
 	public GameObject gunStartLoc;
 	public GameObject gun;
+	public GameObject laserStartLoc;
+	public GameObject laser;
+	public GameObject ninjaStarStartLoc;
+	public GameObject ninjaStar;
 	public bool isOver = false;
 	public AudioSource gameOverSound;
 
@@ -84,6 +88,9 @@ public class questionHandler : MonoBehaviour {
 	
 	public void resetGun() {
 		gun.transform.position = gunStartLoc.transform.position;
+		laser.transform.position = laserStartLoc.transform.position;
+		ninjaStar.transform.position = ninjaStarStartLoc.transform.position;
+
 	}
 
 	public void loadNextQuestion(){

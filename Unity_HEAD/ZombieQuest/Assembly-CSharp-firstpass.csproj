@@ -199,6 +199,9 @@
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
  </Reference>
+ <Reference Include="DynamicWaterNativeWrapper">
+ <HintPath>C:/Users/maxwell.stow/Desktop/CMPT401_Learned_Owls/Unity_HEAD/ZombieQuest/Assets/DynamicWater/Plugins/DynamicWaterNativeWrapper.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/maxwell.stow/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
  </Reference>

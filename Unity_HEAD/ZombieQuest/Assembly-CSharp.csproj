@@ -51,6 +51,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DynamicWater\BuoyancyForce.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_BoatController.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_BoatGUI.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_BuoyancyGUI.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_CameraFade.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_CharacterRipples.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_DemoGUI.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_DragRigidBody.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_GameCamera.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_GUILayout.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_HUDFPS.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_MainMenuGUI.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_MouseSplash.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_ObstructionGUI.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_PoolGUI.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_SceneManagerWrapper.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_SetCenterOfMass.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_Swimming.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_ThirdPersonController.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_UnderwaterThirdPersonAnimation.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_WaterBumpOffset.cs" />
+     <Compile Include="Assets\DynamicWater\Demos\Assets\Scripts\DW_WaterSplash.cs" />
+     <Compile Include="Assets\DynamicWater\DynamicWater.cs" />
+     <Compile Include="Assets\DynamicWater\DynamicWaterSolverAdvancedAmbient.cs" />
+     <Compile Include="Assets\DynamicWater\DynamicWaterSolverAmbientSimple.cs" />
+     <Compile Include="Assets\DynamicWater\DynamicWaterSolverSimulation.cs" />
+     <Compile Include="Assets\DynamicWater\FluidVolume.cs" />
+     <Compile Include="Assets\DynamicWater\Internals\DynamicWaterCore.cs" />
+     <Compile Include="Assets\DynamicWater\Internals\DynamicWaterMath.cs" />
+     <Compile Include="Assets\DynamicWater\Internals\DynamicWaterMesh.cs" />
+     <Compile Include="Assets\DynamicWater\Internals\DynamicWaterSolver.cs" />
+     <Compile Include="Assets\DynamicWater\MarkObstructionAsTerrain.cs" />
+     <Compile Include="Assets\DynamicWater\SplashZone.cs" />
+     <Compile Include="Assets\DynamicWater\UnderwaterFog.cs" />
+     <Compile Include="Assets\DynamicWater\WaterDetector.cs" />
      <Compile Include="Assets\OculusPlatform\Scripts\AchievementType.cs" />
      <Compile Include="Assets\OculusPlatform\Scripts\AndroidPlatform.cs" />
      <Compile Include="Assets\OculusPlatform\Scripts\ApplicationOptions.cs" />
@@ -246,25 +281,84 @@
      <Compile Include="Assets\Scripts\TitleScreen.cs" />
      <Compile Include="Assets\Scripts\ZombieAnimationScript.cs" />
      <Compile Include="Assets\Scripts\ZombieControllerScript.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\ButtonHandler.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\CrossPlatformInputManager.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\InputAxisScrollbar.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\Joystick.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\MobileControlRig.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\TiltInput.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\TouchPad.cs" />
+     <Compile Include="Assets\Standard Assets 1\CrossPlatformInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\Standard Assets 1\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
+     <Compile Include="Assets\Standard Assets 1\Environment\Water\Water\Scripts\Displace.cs" />
+     <Compile Include="Assets\Standard Assets 1\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
+     <Compile Include="Assets\Standard Assets 1\Environment\Water\Water\Scripts\MeshContainer.cs" />
+     <Compile Include="Assets\Standard Assets 1\Environment\Water\Water\Scripts\PlanarReflection.cs" />
+     <Compile Include="Assets\Standard Assets 1\Environment\Water\Water\Scripts\SpecularLighting.cs" />
+     <Compile Include="Assets\Standard Assets 1\Environment\Water\Water\Scripts\Water.cs" />
+     <Compile Include="Assets\Standard Assets 1\Environment\Water\Water\Scripts\WaterBase.cs" />
+     <Compile Include="Assets\Standard Assets 1\Environment\Water\Water\Scripts\WaterTile.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\ActivateTrigger.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\AlphaButtonClickMask.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\AutoMobileShaderSwitch.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\AutoMoveAndRotate.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\CameraRefocus.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\CurveControlledBob.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\DragRigidbody.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\DynamicShadowSettings.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\EventSystemChecker.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\FollowTarget.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\ForcedReset.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\FOVKick.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\FPSCounter.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\LerpControlledBob.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\ObjectResetter.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\ParticleSystemDestroyer.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\PlatformSpecificContent.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\SimpleActivatorMenu.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\SimpleMouseRotator.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\SmoothFollow.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\TimedObjectActivator.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\TimedObjectDestructor.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\WaypointCircuit.cs" />
+     <Compile Include="Assets\Standard Assets 1\Utility\WaypointProgressTracker.cs" />
      <None Include="Assets\OvrAvatar\Content\Materials\AvatarMaterialStateShader.cginc" />
      <None Include="Assets\OVR\Resources\OVRMRUnlitTransparent.shader" />
+     <None Include="Assets\Standard Assets 1\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
      <None Include="Assets\OVR\Resources\OVRMRChromaKey.cginc" />
      <None Include="Assets\OVR\Shaders\OVRColorRampAlpha.shader" />
      <None Include="Assets\OvrAvatar\Content\Materials\AvatarSurfaceShader.shader" />
      <None Include="Assets\OVR\Resources\Cubemap Blit.shader" />
+     <None Include="Assets\DynamicWater\Demos\Assets\Shaders\WaterBumped_Fresnel.shader" />
      <None Include="Assets\OvrAvatar\Content\Materials\AvatarSurfaceShaderSelfOccluding.shader" />
+     <None Include="Assets\DynamicWater\Demos\Assets\Shaders\WaterSimpleObstructionAlpha.shader" />
      <None Include="Assets\OVR\Resources\OVRMRUnlit.shader" />
+     <None Include="Assets\DynamicWater\Demos\Assets\Shaders\WaterSimpleAdditive.shader" />
+     <None Include="Assets\DynamicWater\Demos\Assets\Shaders\WaterReflectiveSimpleTwoSided.shader" />
+     <None Include="Assets\DynamicWater\Demos\Assets\Shaders\DepthMask.shader" />
      <None Include="Assets\OVR\Shaders\Unlit Crosshair.shader" />
+     <None Include="Assets\Standard Assets 1\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\OVR\Resources\Unlit Transparent Color.shader" />
+     <None Include="Assets\DynamicWater_ReadMe.txt" />
      <None Include="Assets\OVR\Resources\OVRMRCameraFrameLit.shader" />
      <None Include="Assets\OvrAvatar\Content\Materials\AvatarSurfaceShaderPBSV2.shader" />
      <None Include="Assets\OVR\Resources\Underlay Transparent Occluder.shader" />
      <None Include="Assets\OVR\Resources\Texture2D Blit.shader" />
      <None Include="Assets\OvrAvatar\Content\Materials\AvatarSurfaceShaderPBS.shader" />
+     <None Include="Assets\DynamicWater\Demos\Assets\Shaders\Mobile-Particle-Add (Cull On).shader" />
+     <None Include="Assets\Standard Assets 1\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\DynamicWater\Demos\Assets\Shaders\WaterSimple.shader" />
      <None Include="Assets\OVR\Resources\OVRMRCameraFrame.shader" />
      <None Include="Assets\OvrAvatar\Samples\SocialStarter\README.txt" />
      <None Include="Assets\OVR\Resources\OVRMRClipPlane.shader" />
+     <None Include="Assets\Standard Assets 1\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+     <None Include="Assets\Standard Assets 1\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+     <None Include="Assets\Standard Assets 1\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\OVR\Resources\Underlay Impostor.shader" />
+     <None Include="Assets\DynamicWater\Demos\Assets\Shaders\WaterReflectiveSimple.shader" />
      <None Include="Assets\OVR\Plugins\placeholder.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -337,6 +431,9 @@
  </Reference>
  <Reference Include="UnityEditor.OSXStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="DynamicWaterNativeWrapper">
+ <HintPath>C:/Users/maxwell.stow/Desktop/CMPT401_Learned_Owls/Unity_HEAD/ZombieQuest/Assets/DynamicWater/Plugins/DynamicWaterNativeWrapper.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/Users/maxwell.stow/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.3/UnityEngine.Advertisements.dll</HintPath>
