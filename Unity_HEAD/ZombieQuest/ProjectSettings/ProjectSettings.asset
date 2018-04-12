@@ -670,7 +670,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 3bfede46-4a61-4793-83fe-8653e8bd10d8
   projectName: VRTutorial
   organizationId: maxwellstow

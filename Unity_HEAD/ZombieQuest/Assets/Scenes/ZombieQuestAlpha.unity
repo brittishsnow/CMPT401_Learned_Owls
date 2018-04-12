@@ -702,8 +702,8 @@ MonoBehaviour:
   leftHand: {fileID: 2126811639}
   auto: 0
   fireRate: 0.5
-  bulletSpeed: 5
-  direction: 1
+  bulletSpeed: 100
+  direction: 3
 --- !u!114 &399334036
 MonoBehaviour:
   m_ObjectHideFlags: 0

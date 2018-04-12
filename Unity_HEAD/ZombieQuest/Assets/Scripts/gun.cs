@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class gun : MonoBehaviour {
 
 	public GameObject bullet;
@@ -55,6 +54,7 @@ public class gun : MonoBehaviour {
 	private void shoot() {
 		timer = 0;
 		Vector3 pos = gameObject.transform.position;
+		
 		GameObject bulletInstance = GameObject.Instantiate (bullet, exitPoint.transform.position, gameObject.transform.rotation);
 		switch (direction) {
 		case 1: 
