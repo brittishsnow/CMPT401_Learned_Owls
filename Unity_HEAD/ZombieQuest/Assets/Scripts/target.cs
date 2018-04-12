@@ -67,6 +67,7 @@ public class target : MonoBehaviour {
 
 	void wrongAnswer() {
 		Debug.Log ("Wrong!");
+		zombieController.SendMessage ("Wrong");
 		zombieController.SendMessage ("AddZombie", 8);
 
 	}

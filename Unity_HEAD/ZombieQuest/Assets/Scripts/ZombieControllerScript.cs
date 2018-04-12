@@ -11,7 +11,8 @@ public class ZombieControllerScript : MonoBehaviour {
 	public GameObject extraZombieModel;
 	public GameObject correct;
 	public GameObject wrong;
-
+	public AudioSource correctSound;
+	public AudioSource wrongSound;
 
 	public List<Transform> startingPositions = new List<Transform>();
 
@@ -29,6 +30,7 @@ public class ZombieControllerScript : MonoBehaviour {
 
 	public void Correct() {
 			correct.SetActive (true);
+			correctSound.Play();
 		zombieA.GetComponent<ZombieAnimationScript> ().Die();
 		zombieB.GetComponent<ZombieAnimationScript> ().Die();
 		zombieC.GetComponent<ZombieAnimationScript> ().Die();
@@ -37,6 +39,7 @@ public class ZombieControllerScript : MonoBehaviour {
 	}
 	public void Wrong() {
 		wrong.SetActive (true);
+		wrongSound.Play();
 
 	}
 	// Update is called once per frame
