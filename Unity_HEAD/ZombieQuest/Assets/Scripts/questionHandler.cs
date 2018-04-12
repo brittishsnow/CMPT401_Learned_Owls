@@ -26,6 +26,7 @@ public class questionHandler : MonoBehaviour {
 	public GameObject gunStartLoc;
 	public GameObject gun;
 	public bool isOver = false;
+	public AudioSource gameOverSound;
 
 	private float timer = 0;
 	private bool runTime = false;
@@ -219,6 +220,7 @@ public class questionHandler : MonoBehaviour {
 	public void endGame() {
 		isOver = true;
 		end.SetActive (true);
+		gameOverSound.Play();
 		background.SetActive (true);
 		zombieController.SendMessage ("EndWave", false);
 	}
